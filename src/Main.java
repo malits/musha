@@ -49,6 +49,20 @@ public class Main {
 
             System.out.println("*jumps on you*");
 
+        } String Oak = ""; String Ash ="";
+        System.out.println("Would you like to Travel to Pallet Town? Yes or No.");
+        String Travel = m.getInput();
+        System.out.println("Heading to " + Travel);
+        if(Travel.equals("Yes")){
+            System.out.println("Would you like to go see Professer Oak?");
+             Oak = m.getInput();
+        }if(Oak.equals("Yes")){
+
+            System.out.println("Would you like to see some of Ash's old Pokemon? Yes or No.");
+            Ash = m.getInput();
+        } if(Ash.equals("Yes")){
+
+            System.out.println("We will head back around to my Pokemon Yard To see Snorlax and Charizard.");
 
         }
 

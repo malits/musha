@@ -25,9 +25,9 @@ public class Main {
 
         System.out.println("Who would you like to be your Starter Pokemon? \nYour choices are Izzy, McGraw, Lego,");
         String Starter = m.getInput();
-        Dog lego = new Dog(20, "Lego");
-        Dog Izzy = new Dog(15, "Izzy");
-        Dog McGraw = new Dog(10, "McGraw");
+        Dog lego = new Dog(60, "Lego");
+        Dog Izzy = new Dog(40,"Izzy");
+        Dog McGraw = new Dog( 20, "McGraw");
 
         Dog player = new Dog(0,"placeholder");
 

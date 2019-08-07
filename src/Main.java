@@ -1,5 +1,5 @@
 import javafx.beans.value.WritableValue;
-
+import java.util.Random;
 import java.awt.*;
 import  java.util.Scanner;
 
@@ -40,26 +40,61 @@ public class Main {
 
         }
 
-        Character hero = new Character(20, name);
+        Character Hero = new Character(20, name);
         Character Rival = new Character(20, "Dot");
+        System.out.println("Now you are entering a Battle!");
 
-        System.out.println("Now you are entering a Battle! \n Do you want to use Attack1 or Attack2");
-        String battleAttack = m.getInput();
-        if(battleAttack.equals("Attack1")){
-            int damagehealth = hero.attack1();
-            Rival.health = Rival.health - damagehealth;
-            System.out.println(Rival.health);
+        Random r = new Random(1);
 
+        while(Hero.healthcheck() && Rival.healthcheck() ) {
 
-        }else if (battleAttack.equals("Attack2")) {
+            System.out.println("Do you want to use Attack1 or Attack2");
+            String battleAttack = m.getInput();
 
-           int damagehealth = hero.attack2();
-           Rival.health = Rival.health - damagehealth;
-           System.out.print(Rival.health);
+            if (battleAttack.equals("Attack1")) {
+                int damagehealth = Hero.attack1();
+                Rival.health = Rival.health - damagehealth;
 
 
+            } else if (battleAttack.equals("Attack2")) {
+
+                int damagehealth = Hero.attack2();
+                Rival.health = Rival.health - damagehealth;
+                System.out.println(Rival.health);
+
+            }
+            int Attack = r.nextInt(2);
+            int damagehealth =0;
+            if(Attack == 1){
+
+                damagehealth = Rival.attack1();
+
+            }else if(Attack == 0){
+                damagehealth = Rival.attack2();
+
+
+            }
+
+            System.out.println("Rival Attacks");
+            Hero.health = Hero.health - damagehealth;
+            System.out.println("Hero health is " + Hero.health);
+            System.out.println("Rival Health is " + Rival.health);
+
+            if(Rival.health <=0){
+
+                System.out.println("Rival has died");
+
+            }
+            else if (Hero.health <=0){
+
+                System.out.println("Hero had died");
+                System.exit(90-31849-1-905851);
+            }
         }
-}
+
+
+
+    }
 
 
 

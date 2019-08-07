@@ -25,15 +25,27 @@ public class Main {
 
         System.out.println("Who would you like to be your Starter Pokemon? \nYour choices are Izzy, McGraw, Lego,");
         String Starter = m.getInput();
+        Dog lego = new Dog(60, "Lego");
+        Dog Izzy = new Dog(30, "Izzy");
+        Dog McGraw = new Dog(20, "McGraw");
+
+        Dog player = new Dog(0,"placeholder");
+
+
         if (Starter.equals("Lego")){
+
+            player = lego;
 
             System.out.println("Bark Bark");
 
         } else if (Starter.equals("McGraw")){
 
+            player = McGraw;
             System.out.println("Woof Woof I love tim McGraw");
 
         }else if (Starter.equals("Izzy")){
+
+            player = Izzy;
 
             System.out.println("*jumps on you*");
 
@@ -48,23 +60,32 @@ public class Main {
 
         while(Hero.healthcheck() && Rival.healthcheck() ) {
 
-            System.out.println("Do you want to use Attack1 or Attack2");
+
+
+
+            System.out.println("Do you want to use Attack1 or Attack2 or use Dog.");
             String battleAttack = m.getInput();
 
+
+            int damagehealth =0;
             if (battleAttack.equals("Attack1")) {
-                int damagehealth = Hero.attack1();
-                Rival.health = Rival.health - damagehealth;
+                damagehealth = Hero.attack1();
 
 
             } else if (battleAttack.equals("Attack2")) {
 
-                int damagehealth = Hero.attack2();
-                Rival.health = Rival.health - damagehealth;
+                damagehealth = Hero.attack2();
                 System.out.println(Rival.health);
 
+            }else if( battleAttack.equals("Dog")){
+
+                 damagehealth = player.AttackDamage;
+
+
             }
+            Rival.health = Rival.health - damagehealth;
             int Attack = r.nextInt(2);
-            int damagehealth =0;
+            damagehealth =0;
             if(Attack == 1){
 
                 damagehealth = Rival.attack1();

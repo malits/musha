@@ -16,18 +16,18 @@ public class Main {
     public static void main(String[] args){
         Main m = new Main();
 
-        System.out.println("what is your name?");
+        System.out.println("what is your name: Father Steel or Dot?");
         String name = m.getInput();
 
-        System.out.println(name);
+        System.out.println("Hello "+ name);
 
         System.out.println("Welcome to the Mushaa Region!");
 
         System.out.println("Who would you like to be your Starter Pokemon? \nYour choices are Izzy, McGraw, Lego,");
         String Starter = m.getInput();
-        Dog lego = new Dog(60, "Lego");
-        Dog Izzy = new Dog(30, "Izzy");
-        Dog McGraw = new Dog(20, "McGraw");
+        Dog lego = new Dog(20, "Lego");
+        Dog Izzy = new Dog(15, "Izzy");
+        Dog McGraw = new Dog(10, "McGraw");
 
         Dog player = new Dog(0,"placeholder");
 

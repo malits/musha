@@ -40,7 +40,7 @@ public class Main {
 
         } else if (Starter.equals("McGraw")){
 
-            player = McGraw;
+               player = McGraw;
             System.out.println("Woof Woof I love tim McGraw");
 
         }else if (Starter.equals("Izzy")){
@@ -52,15 +52,17 @@ public class Main {
         } String Oak = ""; String Ash ="";
         System.out.println("Would you like to Travel to Pallet Town? Yes or No.");
         String Travel = m.getInput();
-        System.out.println("Heading to " + Travel);
         if(Travel.equals("Yes")){
-            System.out.println("Would you like to go see Professer Oak?");
+            System.out.println("Would you like to go see Professor Oak?");
              Oak = m.getInput();
-        }if(Oak.equals("Yes")){
+        }
+        if (Travel.equals("No")){
+        System.out.println("Too bad you're going to Pallet Town to see Professor Oak Anyway.");
 
-            System.out.println("Would you like to see some of Ash's old Pokemon? Yes or No.");
-            Ash = m.getInput();
-        } if(Ash.equals("Yes")){
+        }
+
+
+        if(Oak.equals("Yes")){
 
             System.out.println("We will head back around to my Pokemon Yard To see Snorlax and Charizard.");
 
@@ -126,9 +128,20 @@ public class Main {
                 System.exit(90-31849-1-905851);
             }
         }
+        System.out.println("Well done Thank you for saving me from that wild Champ!\n He must have gotten tired of all the Magikarp pee.");
+        System.out.println("Are you still interested in going to visit Snorlax?");
+        String Snorlax = m.getInput();
+            if(Snorlax.equals("Yes")){
+                System.out.println("*Walked about a mile. \n Oak: Here Snorlax is. Snorlax! WAKE UP YOU have Visitors!\n Snorlax:OABOODADADBIOAFBOAFB");
 
 
+            }else if(Snorlax.equals("No")){
 
+
+                System.out.println("ok you are no fun.");
+
+        }
+            System.out.println("The End");   System.exit(1);
     }
 
 

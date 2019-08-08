@@ -142,6 +142,9 @@ public class Main {
 
         }
             System.out.println("The End");   System.exit(1);
+            // so I ran out of ideas for now. I decided to end it here for now but will probably comeback to add on more.
+
+
     }
 
 

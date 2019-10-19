@@ -1,4 +1,3 @@
-import javafx.beans.value.WritableValue;
 import java.util.Random;
 import java.awt.*;
 import  java.util.Scanner;
@@ -132,15 +131,26 @@ public class Main {
         System.out.println("Are you still interested in going to visit Snorlax?");
         String Snorlax = m.getInput();
             if(Snorlax.equals("Yes")){
-                System.out.println("*Walked about a mile. \n Oak: Here Snorlax is. Snorlax! WAKE UP YOU have Visitors!\n Snorlax:OABOODADADBIOAFBOAFB");
+                System.out.println("*Walked about a mile. \n Oak: Here Snorlax is. Sadly he is still sleeping. Gary has the PokeFlute if you want to wake him up!\n Snorlax:ZZZZZZZZZZZZZZZZZZZ");
 
 
             }else if(Snorlax.equals("No")){
 
 
-                System.out.println("ok you are no fun.");
+                System.out.println("ok you are no fun.")
+                System.exit(1 );
 
-        }
+        }System.out.println("Do you want to go Battle Gary Oak?");
+            String Garyrun = m.getInput();
+            if( Garyrun.equals("Yes")) {
+                System.out.print("Ok, Gary was last seen training his Elekid behind Prof. Oaks Lab.");
+
+            }
+
+
+
+
+
             System.out.println("The End");   System.exit(1);
             // so I ran out of ideas for now. I decided to end it here for now but will probably comeback to add on more.
 

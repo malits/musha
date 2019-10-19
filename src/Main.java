@@ -137,7 +137,7 @@ public class Main {
             }else if(Snorlax.equals("No")){
 
 
-                System.out.println("ok you are no fun.")
+                System.out.println("ok you are no fun.");
                 System.exit(1 );
 
         }System.out.println("Do you want to go Battle Gary Oak?");
@@ -146,8 +146,13 @@ public class Main {
                 System.out.print("Ok, Gary was last seen training his Elekid behind Prof. Oaks Lab.");
 
             }
-
-
+            System.out.println("Gary is seen in the distance with his Starly practicing what looks to be wing attack....");
+            System.out.println("GARY! I challenge you to a battle for the PokeFlute!");
+            System.out.print("Say some taunting words to Gary!");
+            Scanner scan = new Scanner(System.in);
+                    String HeroTalk1 = scan.nextLine();
+            System.out.println(HeroTalk1);
+            
 
 
 

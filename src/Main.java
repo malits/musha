@@ -148,11 +148,11 @@ public class Main {
             }
             System.out.println("Gary is seen in the distance with his Starly practicing what looks to be wing attack....");
             System.out.println("GARY! I challenge you to a battle for the PokeFlute!");
-            System.out.print("Say some taunting words to Gary!");
+            System.out.print("Say some taunting words to Gary! \n");
             Scanner scan = new Scanner(System.in);
                     String HeroTalk1 = scan.nextLine();
             System.out.println(HeroTalk1);
-            
+
 
 
 
